@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6514422C2077E2EF0044A55C /* ABImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514422B2077E2EF0044A55C /* ABImageProcessor.swift */; };
+		6514422E2077EA9F0044A55C /* ABImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514422D2077EA9F0044A55C /* ABImageCaptureViewController.swift */; };
 		65706257207046FB005DA950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65706256207046FB005DA950 /* AppDelegate.swift */; };
-		65706259207046FB005DA950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65706258207046FB005DA950 /* ViewController.swift */; };
+		65706259207046FB005DA950 /* ABCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65706258207046FB005DA950 /* ABCameraViewController.swift */; };
 		6570625C207046FB005DA950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6570625A207046FB005DA950 /* Main.storyboard */; };
 		6570625F207046FB005DA950 /* Albatross.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6570625D207046FB005DA950 /* Albatross.xcdatamodeld */; };
 		65706261207046FB005DA950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65706260207046FB005DA950 /* Assets.xcassets */; };
@@ -35,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6514422B2077E2EF0044A55C /* ABImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABImageProcessor.swift; sourceTree = "<group>"; };
+		6514422D2077EA9F0044A55C /* ABImageCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABImageCaptureViewController.swift; sourceTree = "<group>"; };
 		65706253207046FB005DA950 /* Albatross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Albatross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65706256207046FB005DA950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65706258207046FB005DA950 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65706258207046FB005DA950 /* ABCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCameraViewController.swift; sourceTree = "<group>"; };
 		6570625B207046FB005DA950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6570625E207046FB005DA950 /* Albatross.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Albatross.xcdatamodel; sourceTree = "<group>"; };
 		65706260207046FB005DA950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6514422A2077E2190044A55C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6514422B2077E2EF0044A55C /* ABImageProcessor.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		6570624A207046FB005DA950 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +111,11 @@
 		65706255207046FB005DA950 /* Albatross */ = {
 			isa = PBXGroup;
 			children = (
+				6514422A2077E2190044A55C /* Helper */,
 				65706256207046FB005DA950 /* AppDelegate.swift */,
-				65706258207046FB005DA950 /* ViewController.swift */,
-				6570625A207046FB005DA950 /* Main.storyboard */,
+				65BD685520708AE200632FFD /* Interface */,
+				65BD685620708CE900632FFD /* Resources */,
 				65706260207046FB005DA950 /* Assets.xcassets */,
-				65706262207046FB005DA950 /* LaunchScreen.storyboard */,
-				65706265207046FB005DA950 /* Info.plist */,
-				6570625D207046FB005DA950 /* Albatross.xcdatamodeld */,
 			);
 			path = Albatross;
 			sourceTree = "<group>";
@@ -126,6 +136,34 @@
 				6570627B207046FC005DA950 /* Info.plist */,
 			);
 			path = AlbatrossUITests;
+			sourceTree = "<group>";
+		};
+		65BD685520708AE200632FFD /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				6570625A207046FB005DA950 /* Main.storyboard */,
+				65706258207046FB005DA950 /* ABCameraViewController.swift */,
+				6514422D2077EA9F0044A55C /* ABImageCaptureViewController.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		65BD685620708CE900632FFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65F6D4EC2073371400F3ED9A /* Images */,
+				65706262207046FB005DA950 /* LaunchScreen.storyboard */,
+				65706265207046FB005DA950 /* Info.plist */,
+				6570625D207046FB005DA950 /* Albatross.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		65F6D4EC2073371400F3ED9A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +229,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Albatross;
 				TargetAttributes = {
 					65706252207046FB005DA950 = {
@@ -263,8 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6570625F207046FB005DA950 /* Albatross.xcdatamodeld in Sources */,
-				65706259207046FB005DA950 /* ViewController.swift in Sources */,
+				65706259207046FB005DA950 /* ABCameraViewController.swift in Sources */,
 				65706257207046FB005DA950 /* AppDelegate.swift in Sources */,
+				6514422C2077E2EF0044A55C /* ABImageProcessor.swift in Sources */,
+				6514422E2077EA9F0044A55C /* ABImageCaptureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +373,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -340,6 +381,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -390,6 +432,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -397,6 +440,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -432,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AA375B8UFT;
-				INFOPLIST_FILE = Albatross/Info.plist;
+				INFOPLIST_FILE = Albatross/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Albatross.Albatross;
@@ -448,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AA375B8UFT;
-				INFOPLIST_FILE = Albatross/Info.plist;
+				INFOPLIST_FILE = Albatross/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Albatross.Albatross;
