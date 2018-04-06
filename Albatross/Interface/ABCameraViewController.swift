@@ -37,7 +37,8 @@ class ABCameraViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as 
+        let controller = segue.destination as! ABImageCaptureViewController
+        controller.capturedImage = capturedImage
     }
     
     @IBAction func captureButtonTapped(_ sender: UIButton) {

@@ -6,8 +6,8 @@ target 'Albatross' do
   use_frameworks!
 
   # Pods for Albatross
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
 
   target 'AlbatrossTests' do
     inherit! :search_paths
