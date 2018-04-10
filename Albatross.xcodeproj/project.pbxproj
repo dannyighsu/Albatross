@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		6514422C2077E2EF0044A55C /* ABImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514422B2077E2EF0044A55C /* ABImageProcessor.swift */; };
 		6514422E2077EA9F0044A55C /* ABImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514422D2077EA9F0044A55C /* ABImageCaptureViewController.swift */; };
+		65144231207AF9910044A55C /* UIImage+AB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65144230207AF9910044A55C /* UIImage+AB.swift */; };
+		65144233207BD5FF0044A55C /* ABRootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65144232207BD5FF0044A55C /* ABRootNavigationController.swift */; };
+		65144235207BD6950044A55C /* UIViewController+AB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65144234207BD6950044A55C /* UIViewController+AB.swift */; };
+		65144238207BD9E00044A55C /* Albatross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65144237207BD9E00044A55C /* Albatross.swift */; };
+		65398C11207D3A2700CAA83F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65398C10207D3A2700CAA83F /* Secrets.swift */; };
 		65706257207046FB005DA950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65706256207046FB005DA950 /* AppDelegate.swift */; };
 		65706259207046FB005DA950 /* ABCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65706258207046FB005DA950 /* ABCameraViewController.swift */; };
 		6570625C207046FB005DA950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6570625A207046FB005DA950 /* Main.storyboard */; };
@@ -43,6 +48,11 @@
 		22AC4DCBB707E8D3DEAA1FA0 /* Pods-Albatross.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albatross.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Albatross/Pods-Albatross.debug.xcconfig"; sourceTree = "<group>"; };
 		6514422B2077E2EF0044A55C /* ABImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABImageProcessor.swift; sourceTree = "<group>"; };
 		6514422D2077EA9F0044A55C /* ABImageCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABImageCaptureViewController.swift; sourceTree = "<group>"; };
+		65144230207AF9910044A55C /* UIImage+AB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AB.swift"; sourceTree = "<group>"; };
+		65144232207BD5FF0044A55C /* ABRootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABRootNavigationController.swift; sourceTree = "<group>"; };
+		65144234207BD6950044A55C /* UIViewController+AB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AB.swift"; sourceTree = "<group>"; };
+		65144237207BD9E00044A55C /* Albatross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albatross.swift; sourceTree = "<group>"; };
+		65398C10207D3A2700CAA83F /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		65706253207046FB005DA950 /* Albatross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Albatross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65706256207046FB005DA950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65706258207046FB005DA950 /* ABCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCameraViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +123,23 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		6514422F207AF97F0044A55C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				65144230207AF9910044A55C /* UIImage+AB.swift */,
+				65144234207BD6950044A55C /* UIViewController+AB.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		65144236207BD9D70044A55C /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				65144237207BD9E00044A55C /* Albatross.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		6570624A207046FB005DA950 = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +165,12 @@
 		65706255207046FB005DA950 /* Albatross */ = {
 			isa = PBXGroup;
 			children = (
+				65398C10207D3A2700CAA83F /* Secrets.swift */,
+				65144236207BD9D70044A55C /* Global */,
+				6514422F207AF97F0044A55C /* Extension */,
 				6514422A2077E2190044A55C /* Helper */,
 				65706256207046FB005DA950 /* AppDelegate.swift */,
+				6570625A207046FB005DA950 /* Main.storyboard */,
 				65BD685520708AE200632FFD /* Interface */,
 				65BD685620708CE900632FFD /* Resources */,
 				65706260207046FB005DA950 /* Assets.xcassets */,
@@ -168,9 +199,9 @@
 		65BD685520708AE200632FFD /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				6570625A207046FB005DA950 /* Main.storyboard */,
 				65706258207046FB005DA950 /* ABCameraViewController.swift */,
 				6514422D2077EA9F0044A55C /* ABImageCaptureViewController.swift */,
+				65144232207BD5FF0044A55C /* ABRootNavigationController.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -422,10 +453,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6570625F207046FB005DA950 /* Albatross.xcdatamodeld in Sources */,
+				65398C11207D3A2700CAA83F /* Secrets.swift in Sources */,
 				65706259207046FB005DA950 /* ABCameraViewController.swift in Sources */,
+				65144231207AF9910044A55C /* UIImage+AB.swift in Sources */,
 				65706257207046FB005DA950 /* AppDelegate.swift in Sources */,
 				6514422C2077E2EF0044A55C /* ABImageProcessor.swift in Sources */,
+				65144233207BD5FF0044A55C /* ABRootNavigationController.swift in Sources */,
 				6514422E2077EA9F0044A55C /* ABImageCaptureViewController.swift in Sources */,
+				65144238207BD9E00044A55C /* Albatross.swift in Sources */,
+				65144235207BD6950044A55C /* UIViewController+AB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AA375B8UFT;
 				INFOPLIST_FILE = Albatross/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Albatross.Albatross;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -616,7 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AA375B8UFT;
 				INFOPLIST_FILE = Albatross/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Albatross.Albatross;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -91,7 +91,9 @@ extension ABCameraViewController: AVCapturePhotoCaptureDelegate {
         }
         
         if let image = UIImage.init(data: imageData) {
-            capturedImage = image
+            capturedImage = image.binarizedImage()
+            
+            performSegue(withIdentifier: "capture", sender: self)
         }
     }
     
