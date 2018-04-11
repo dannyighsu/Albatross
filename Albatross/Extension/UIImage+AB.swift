@@ -33,4 +33,9 @@ extension UIImage {
         return normalizedImage
     }
     
+    func base64String() -> String? {
+        let imageData = UIImagePNGRepresentation(self)
+        return imageData?.base64EncodedString()
+    }
+    
 }

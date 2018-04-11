@@ -8,6 +8,7 @@ target 'Albatross' do
   # Pods for Albatross
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
 
   target 'AlbatrossTests' do
     inherit! :search_paths
